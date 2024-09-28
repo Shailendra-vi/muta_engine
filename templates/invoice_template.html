@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .invoice-header {
+            text-align: center;
+        }
+        .invoice-details {
+            margin-top: 20px;
+        }
+        .invoice-details td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="invoice-header">Invoice</h1>
+    <p>Dear {{ user.username }},</p>
+    <p>Thank you for your order. Here are the details of your transaction:</p>
+
+    <table class="invoice-details">
+        <tr>
+            <td><strong>Order ID</strong></td>
+            <td>{{ transaction_details.order_id }}</td>
+        </tr>
+        <tr>
+            <td><strong>Amount</strong></td>
+            <td>{{ transaction_details.order_amount }}</td>
+        </tr>
+        <tr>
+            <td><strong>Transaction Date</strong></td>
+            <td>{{ transaction_details.transaction_date }}</td>
+        </tr>
+    </table>
+
+    <p>If you have any questions, feel free to contact us.</p>
+</body>
+</html>
